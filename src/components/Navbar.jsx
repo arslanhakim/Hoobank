@@ -54,7 +54,15 @@ const Navbar = () => {
                   index === navLinks.length - 1 ? "mr-0" : "mb-4"
                 } text-white`}
               >
-                <NavLink to={`${nav.id}`}>{nav.title}</NavLink>
+                <Link
+                  to={`${nav.id}`}
+                  spy={true}
+                  smooth={true}
+                  duration={500}
+                  offset={-100}
+                >
+                  {nav.title}
+                </Link>
               </li>
             ))}
           </ul>
